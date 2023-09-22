@@ -24,8 +24,8 @@ nav a:hover {
 
 .card {
     height: 100%;
-    cursor: pointer;
     transition: all 0.3s;
+    color: #fff5e0;
 }
 
 .card > a {
@@ -34,4 +34,17 @@ nav a:hover {
 
 .card:hover {
     transform: scale(.98);
+}
+
+.card span {
+    font-weight: bold;
+}
+
+.btn-primary {
+    --bs-btn-bg: #141e46;
+    --bs-btn-border-color: #141e46;
+    --bs-btn-hover-bg: #22357e;
+    --bs-btn-hover-border-color: #22357e;
+    --bs-btn-active-bg: #22357e;
+    --bs-btn-active-border-color: #22357e;
 }

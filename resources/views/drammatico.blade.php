@@ -41,20 +41,30 @@
     </header>
 
     <main class="container pt-5 pb-5">
-        <h1 class="text-center text-primary m-0 pb-5 fw-bold">Generi cinematografici</h1>
-        <div class="row row-cols-1 row-cols-sm-2 gy-3 justify-content-center">
-            @foreach ($movieGenres as $singleGenre)
+        <h1 class="text-center text-primary m-0 pb-5 fw-bold">Drammatico</h1>
+        <div class="row row-cols-1 row-cols-sm-3 gy-3 justify-content-center">
+            @foreach ($drammatico as $movie)
                 <div class="col">
                     <div class="card bg-primary">
-                        <a href="{{ $singleGenre['genre'] }}" class="text-secondary decoration-none">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold">{{ $singleGenre['genre'] }}</h5>
-                                <p class="card-text">{{ $singleGenre['description'] }}</p>
-                            </div>
-                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">{{ $movie['title'] }}</h5>
+                            <ul class="list-unstyled card-text">
+                                <li class='card-text'>
+                                    <span>Regista</span>:
+                                    {{ $movie['director'] }}
+                                </li>
+                                <li class='card-text'>
+                                    <span>Trama</span>:
+                                    {{ $movie['description'] }}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             @endforeach
+        </div>
+        <div class="d-flex justify-content-center p-5">
+            <a href="/" class="btn btn-primary fw-bold" tabindex="-1" role="button">Torna alla Home</a>
         </div>
     </main>
 
